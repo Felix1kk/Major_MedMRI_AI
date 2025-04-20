@@ -22,3 +22,30 @@ A powerful Streamlit web application that analyzes brain MRI images using Google
 - 📥 **PDF Export** – Download MRI report with annotated findings and images.
 - 💾 **Saved Reports** – Stores report history for logged-in users.
 - 📧 **Email Report** – Share generated reports securely via email.
+
+
+## 📂 Project Structure
+
+```
+MedMRI-AI/
+├── Main.py
+├── pages/
+│   ├── Analyze.py
+│   ├── Login.py
+│   └── Register.py
+├── agents/
+│   ├── radiologist_agent.py
+│   ├── report_agent.py
+│   ├── region_identifier_agent.py
+│   └── patient_assistant_agent.py
+├── utils/
+│   ├── auth.py
+│   ├── pdf_generator.py
+│   ├── email_sender.py
+│   └── utils.py
+├── assets/
+│   └── logo.png
+├── firebase_config.json
+├── requirements.txt
+└── README.md
+```
