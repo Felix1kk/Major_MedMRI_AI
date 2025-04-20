@@ -61,7 +61,7 @@ These agents collaborate in sequence for every MRI image, allowing the applicati
 
 ---
 
-## 🧠 AI Agents
+## AI Agents
 
 ```mermaid
 flowchart LR
