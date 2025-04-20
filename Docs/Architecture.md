@@ -91,8 +91,7 @@ MedMRI-AI/
 ## 📈 Scalability Notes
 - Gemini handles model scaling (external API)
 - Firebase scales with user base (auto-managed)
-- Can be deployed on Streamlit Cloud, Render, or Docker
-
+- Can be deployed on Streamlit Cloud
 ---
 
 ## 📌 Diagram
