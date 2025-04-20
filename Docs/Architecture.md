@@ -1,4 +1,4 @@
-# 🧠 MedMRI AI - Architecture Documentation
+# MedMRI AI - Architecture Documentation
 
 This document provides an overview of the architecture and system components used to build **MedMRI AI**, a Streamlit-based application for analyzing MRI scans using Google's Gemini AI.
 
@@ -18,7 +18,12 @@ graph TD;
 ---
 
 ## 🧱 Core Components
-
+### AI Agents (Gemini-Powered)
+MedMRI AI uses a modular AI-agent pipeline, with each agent built on Google Gemini:
+- **Radiologist Agent**: Interprets MRI scans, identifies anatomical regions, and detects abnormalities.
+- **Report Generator Agent**: Translates findings into structured medical reports.
+- **Medical Explainer Agent**: Converts medical terms into patient-friendly summaries.
+  
 ### 1. **Frontend - Streamlit**
 - UI for login, registration, image upload, and report viewing.
 - Manages routing between Login/Register, Analysis, Saved Reports, Help, etc.
