@@ -100,12 +100,5 @@ MedMRI-AI/
 
 ---
 
-## 🧪 Suggested Improvements
-- Add user roles (e.g., Admin/Radiologist)
-- Enable feedback on reports
-- Support for non-MRI medical imaging (e.g., CT/X-ray)
-- Auto-tagging and filtering in report history
-
----
 
 © 2024 MedMRI AI Project — All rights reserved.
