@@ -48,6 +48,20 @@ MedMRI AI is a multimodal Streamlit application that uses Google’s Gemini AI t
 
 ---
 
+## 🧠 AI Agents
+
+MedMRI AI uses specialized AI agents built on Google Gemini to handle various aspects of MRI analysis:
+
+- **Radiologist Agent** – Analyzes the uploaded MRI image to detect anatomical regions and abnormalities.
+- **Report Generator Agent** – Structures the findings into a medically coherent report.
+- **Medical Explainer Agent** – Converts clinical findings into simplified patient-friendly language.
+- **(Optional) Patient Assistant Agent** – Interacts with user questions and helps explain suggested actions.
+
+These agents collaborate in sequence for every MRI image, allowing the application to deliver accurate, explainable, and actionable medical results.
+
+---
+
+
 ## 🛠 Tools & Technologies
 
 - Google Gemini API (vision + text)
