@@ -1,0 +1,10 @@
+streamlit
+google-generativeai
+firebase-admin
+werkzeug
+reportlab
+Pillow
+streamlit-cookies-manager
+smtplib
+email-validator
+python-dotenv
