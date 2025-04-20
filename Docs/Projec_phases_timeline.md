@@ -69,7 +69,6 @@ flowchart LR
     U --> R[🧠 Radiologist Agent: Identify Region + Abnormalities]
     R --> G[📄 Report Generator Agent: Structured Report]
     G --> E[💬 Medical Explainer Agent: Patient-Friendly Summary]
-    E --> (Optional) A[🤖 Patient Assistant Agent: QA & Clarifications]
 ```
 
 
