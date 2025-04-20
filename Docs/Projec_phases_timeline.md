@@ -1,6 +1,6 @@
 # 📘 Project Development Documentation
 
-## 🧠 Project Title: MedMRI AI – MRI Scan Analysis Web Application
+## Project Title: MedMRI AI – MRI Scan Analysis Web Application
 
 ### 📌 Overview
 MedMRI AI is a multimodal Streamlit application that uses Google’s Gemini AI to analyze MRI images, identify abnormalities, generate medical reports, and assist users through a secure, user-friendly interface.
