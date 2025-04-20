@@ -6,14 +6,6 @@ This document provides an overview of the architecture and system components use
 
 ## 📐 High-Level Architecture
 
-```mermaid
-graph TD;
-    A[User Uploads MRI Image] --> B[Streamlit Frontend]
-    B --> C[Gemini API Google Generative AI]
-    B --> D[Firebase Auth & Firestore DB]
-    B --> E[PDF Generation with ReportLab]
-    B --> F[Email Report via SMTP]
-```
 
 ```mermaid
 flowchart TD
