@@ -15,6 +15,17 @@ graph TD;
     B --> F[Email Report via SMTP]
 ```
 
+```mermaid
+flowchart TD
+    A[User] --> B[Streamlit Frontend]
+    B --> C[Gemini AI Agents]
+    C --> C1[🧠 Radiologist Agent]
+    C1 --> C2[📄 Report Generator Agent]
+    C2 --> C3[💬 Medical Explainer Agent]
+    B --> D[Firebase Auth & Firestore DB]
+    B --> E[PDF Generator]
+    B --> F[Email via SMTP]
+```
 ---
 
 ## 🧱 Core Components
