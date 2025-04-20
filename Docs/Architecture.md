@@ -102,10 +102,6 @@ MedMRI-AI/
 - Can be deployed on Streamlit Cloud
 ---
 
-## 📌 Diagram
-
-![System Architecture](assets/system_architecture.png)
-
 ---
 
 
