@@ -48,7 +48,7 @@ MedMRI AI is a multimodal Streamlit application that uses Google’s Gemini AI t
 
 ---
 
-## 🧠 AI Agents
+## AI Agents
 
 MedMRI AI uses specialized AI agents built on Google Gemini to handle various aspects of MRI analysis:
 
