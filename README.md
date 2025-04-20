@@ -1,6 +1,6 @@
 # Major_project
 
-# MedMRI AI 🧠💡
+# MedMRI AI 🧠💡 - A Multimodal Mri Scan Analysis and Reporting System Using Generative AI and AI Agents
 
 A powerful Streamlit web application that analyzes brain MRI images using Google's Gemini multimodal model, highlights abnormal regions, generates detailed medical reports, and enables secure access and sharing.
 
