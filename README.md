@@ -6,11 +6,6 @@ A powerful Streamlit web application that analyzes brain MRI images using Google
 
 ---
 
-## 🏗️ System Architecture
-
-![System Architecture](A_diagram_in_the_image_illustrates_the_system_arch.png)
-
----
 
 ## 🚀 Features
 
