@@ -14,8 +14,9 @@ A powerful Streamlit web application that analyzes brain MRI images using Google
 
 ## 🚀 Features
 
+- 🌍 **Supports All MRI Regions** – Automatically adapts to brain, spine, cardiac, abdomen, joints, and more based on image content.
 - 🔐 **Authentication** – Secure user login and registration with Firebase.
-- 📁 **Multi-image Upload** – Upload and analyze multiple brain MRI images.
+- 📁 **Multi-image Upload** – Upload and analyze multiple MRI images.
 - 🧠 **AI Analysis** – Utilizes Gemini 1.5 to detect abnormalities in MRI scans.
 - 🎯 **Region Identifier** – Highlights the detected abnormal regions.
 - 📝 **Detailed Medical Report** – Structured medical report generated from findings.
