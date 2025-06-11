@@ -4,9 +4,8 @@ from firebase_admin import credentials, firestore
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 import json
-from app import get_firebase_client
+from firebase_init import db
 
-db = get_firebase_client()
 
 def register_user(email, username, password):
     hashed_pw = generate_password_hash(password)
