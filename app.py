@@ -12,6 +12,7 @@ if not cookies.ready():
 st.session_state["logged_in"] = cookies.get("logged_in", "False") == "True"
 st.session_state["username"] = cookies.get("username", "")
 st.session_state["page"] = cookies.get("page", "Login")
+st.session_state["user_id"] = cookies.get("user_id", "") # Added user_id
 
 # Routing
 page = st.session_state["page"]
@@ -38,20 +39,21 @@ elif page == "About":
    # from pages.Assistant import assistant_page
    # assistant_page()
 
-# Sidebar Nav
 with st.sidebar:
     st.title("🧠 MedMRI AI")
     st.markdown(f"👋 Welcome, **{st.session_state.get('username', 'Guest')}**")
 
     if st.session_state.get("logged_in"):
-        nav = st.radio("Go to", ["Analyze","My Reports", "Help", "About"], index=["Analyze","My Reports", "Help", "About"].index(st.session_state["page"]))
+        nav_options_logged_in = ["Analyze", "My Reports", "Help", "About"]
+        nav = st.radio("Go to", nav_options_logged_in, index=nav_options_logged_in.index(st.session_state["page"]))
         if nav != st.session_state["page"]:
             st.session_state["page"] = nav
             cookies["page"] = nav
             cookies.save()
             st.rerun()
     else:
-        nav = st.radio("Go to", ["Login", "Register", "Help", "About"], index=["Login", "Register", "Help", "About"].index(st.session_state["page"]))
+        nav_options_not_logged_in = ["Login", "Register", "Help", "About"]
+        nav = st.radio("Go to", nav_options_not_logged_in, index=nav_options_not_logged_in.index(st.session_state["page"]))
         if nav != st.session_state["page"]:
             st.session_state["page"] = nav
             cookies["page"] = nav
@@ -59,9 +61,17 @@ with st.sidebar:
             st.rerun()
 
     if st.session_state.get("logged_in") and st.button("Logout"):
-        st.session_state.clear()
+        # --- FIX: Explicitly set session state variables instead of clear() ---
+        st.session_state["logged_in"] = False
+        st.session_state["username"] = ""
+        st.session_state["user_id"] = ""
+        st.session_state["page"] = "Login" # Directly set the page to Login
+
+        # Update cookies as well
         cookies["logged_in"] = "False"
         cookies["username"] = ""
+        cookies["user_id"] = ""
         cookies["page"] = "Login"
         cookies.save()
+
         st.rerun()
