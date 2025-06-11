@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
 import json
+from firebase_admin import credentials, firestore
 
 #st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
 
