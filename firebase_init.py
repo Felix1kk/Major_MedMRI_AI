@@ -4,9 +4,9 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 import json
 
-firebase_json=json.loads(st.secrets["firebase"]["json"])
 @st.cache_resource
 def get_firebase_client():
+    firebase_json = json.loads(st.secrets["firebase"]["json"])
     """Initializes Firebase and returns the Firestore client, cached."""
     if not firebase_admin._apps:
         try:
