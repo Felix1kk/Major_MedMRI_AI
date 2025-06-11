@@ -2,7 +2,7 @@ import streamlit as st
 from firebase_admin import firestore
 from datetime import datetime
 import base64
-from app import get_firebase_client
+from firebase_init import db
 
 hide_streamlit_style = """
 <style>
@@ -19,7 +19,6 @@ footer .stMetrics {display: none;}  /* Hide the Streamlit logo */
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Assume Firebase is already initialized by Auth.py or app.py
-db = get_firebase_client()
 
 def save_report_to_firebase(user_id, image_name, report_text, explanation_text=None, translated_text=None, translated_language=None):
     """
