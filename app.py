@@ -4,7 +4,7 @@ import json
 from firebase_admin import credentials, firestore
 from firebase_init import db
 
-#st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
+st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
 
 firebase_json = json.loads(st.secrets["firebase"]["json"])
 
