@@ -1,5 +1,19 @@
 import streamlit as st
 
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stApp {padding-top: 0;}
+footer .stButton {display: none;}  /* Hide the Streamlit logo */
+footer .stMetrics {display: none;}  /* Hide the Streamlit logo */
+</style>
+"""
+
+# Inject custom CSS
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 def about_page():
     st.title("ℹ️ About MedMRI AI")
     st.markdown("""
