@@ -3,6 +3,7 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
+import json
 
 firebase_json = json.loads(st.secrets["firebase"]["json"])
 
