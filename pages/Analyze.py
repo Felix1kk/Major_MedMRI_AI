@@ -11,6 +11,20 @@ from Email import send_report_email_interface
 from translate_report import translate_report_ui, translate_text
 from io import BytesIO
 
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stApp {padding-top: 0;}
+footer .stButton {display: none;}  /* Hide the Streamlit logo */
+footer .stMetrics {display: none;}  /* Hide the Streamlit logo */
+</style>
+"""
+
+# Inject custom CSS
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 def analyze_page(cookies):
     st.title("🧠🏥⚕️ MedMRI AI 🤖")
     st.subheader("An AI-Powered MRI Analysis App")
