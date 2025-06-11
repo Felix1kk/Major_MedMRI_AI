@@ -1,3 +1,4 @@
+import streamlit as st
 import google.generativeai as genai
 from PIL import Image # Make sure PIL is imported if you use it elsewhere, though not directly for getvalue()
 
