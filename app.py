@@ -1,7 +1,25 @@
 import streamlit as st
 from streamlit_cookies_manager import EncryptedCookieManager
+import json
 
 #st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
+
+@st.cache_resource
+def get_firebase_client():
+    """Initializes Firebase and returns the Firestore client, cached."""
+    if not firebase_admin._apps:
+        try:
+            # Access credentials from Streamlit secrets
+            cred = credentials.Certificate(st.secrets["firebase_json"])
+            firebase_admin.initialize_app(cred)
+            # st.success("Firebase initialized successfully!") # Optional: show success message
+        except Exception as e:
+            st.error(f"Failed to initialize Firebase: {e}. Please ensure your `.streamlit/secrets.toml` is correctly configured.")
+            st.stop() # Stop the app if Firebase fails to initialize
+    return firestore.client()
+
+# Call the cached function to get the Firestore client
+db = get_firebase_client()
 
 # Persistent cookies for login state
 cookies = EncryptedCookieManager(prefix="medmri", password="secure-app-password")
