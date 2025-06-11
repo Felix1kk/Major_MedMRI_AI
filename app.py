@@ -4,13 +4,15 @@ import json
 
 #st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
 
+firebase_json = json.loads(st.secrets["firebase"]["json"])
+
 @st.cache_resource
 def get_firebase_client():
     """Initializes Firebase and returns the Firestore client, cached."""
     if not firebase_admin._apps:
         try:
             # Access credentials from Streamlit secrets
-            cred = credentials.Certificate(st.secrets["firebase_json"])
+            cred = credentials.Certificate(firebase_json)
             firebase_admin.initialize_app(cred)
             # st.success("Firebase initialized successfully!") # Optional: show success message
         except Exception as e:
