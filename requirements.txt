@@ -7,3 +7,6 @@ Pillow
 streamlit-cookies-manager
 email-validator
 python-dotenv
+audio-recorder-streamlit
+pydub
+SpeechRecognition
