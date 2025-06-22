@@ -8,7 +8,6 @@ st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
 
 hide_streamlit_style = """
 <style>
-#MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
 .stApp {padding-top: 0;}
