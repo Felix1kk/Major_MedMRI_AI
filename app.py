@@ -6,36 +6,6 @@ from firebase_init import db
 
 st.set_page_config(page_title="MedMRI AI", page_icon="🧠", layout="centered")
 
-hide_streamlit_style = """
-    <style>
-    /* Hide the 'Made with Streamlit' footer badge */
-    footer {
-        visibility: hidden;
-        height: 0%;
-    }
-    /* Potentially hide the 'Deploy' button/toolbar */
-    div[data-testid="stToolbar"] {
-        visibility: hidden !important;
-        height: 0%;
-        position: fixed;
-    }
-    /* Hide the GitHub icon (if it appears separately from MainMenu) */
-    #GithubIcon {
-        visibility: hidden;
-    }
-    /* Hide the main menu (hamburger icon) if desired, but this might hide useful options */
-    /* #MainMenu {
-        visibility: hidden;
-    } */
-    /* If you want to hide the 'Manage app' button (on Community Cloud) */
-    .stDeployButton {
-        visibility: hidden;
-        height: 0%;
-    }
-    </style>
-    """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
 # Persistent cookies for login state
 cookies = EncryptedCookieManager(prefix="medmri", password="secure-app-password")
 if not cookies.ready():
