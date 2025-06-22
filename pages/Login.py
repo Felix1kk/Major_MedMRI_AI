@@ -3,7 +3,6 @@ from Auth import authenticate_user
 
 hide_streamlit_style = """
 <style>
-#MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
 .stApp {padding-top: 0;}
