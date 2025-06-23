@@ -6,7 +6,6 @@ from firebase_init import db
 
 hide_streamlit_style = """
 <style>
-
 footer {visibility: hidden;}
 header {visibility: hidden;}
 .stApp {padding-top: 0;}
