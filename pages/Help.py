@@ -1,35 +1,17 @@
 import streamlit as st
 
 hide_streamlit_style = """
-    <style>
-    /* Hide the 'Made with Streamlit' footer badge */
-    footer {
-        visibility: hidden;
-        height: 0%;
-    }
-    /* Potentially hide the 'Deploy' button/toolbar */
-    div[data-testid="stToolbar"] {
-        visibility: hidden !important;
-        height: 0%;
-        position: fixed;
-    }
-    /* Hide the GitHub icon (if it appears separately from MainMenu) */
-    #GithubIcon {
-        visibility: hidden;
-    }
-    /* Hide the main menu (hamburger icon) if desired, but this might hide useful options */
-    /* #MainMenu {  <--- COMMENT THIS LINE OUT (or remove it)
-        visibility: hidden;
-    } */
-    /* If you want to hide the 'Manage app' button (on Community Cloud) */
-    .stDeployButton {
-        visibility: hidden;
-        height: 0%;
-    }
-    </style>
-    """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+<style>
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stApp {padding-top: 0;}
+footer .stButton {display: none;}  /* Hide the Streamlit logo */
+footer .stMetrics {display: none;}  /* Hide the Streamlit logo */
+</style>
+"""
 
+# Inject custom CSS
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 def help_page():
     st.title("❓ Help & Instructions")
     st.markdown("""
