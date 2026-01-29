@@ -4,7 +4,7 @@ import google.generativeai as genai
 gemini_api_key = st.secrets["gemini"]["api_key"]
 
 genai.configure(api_key=gemini_api_key)
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 def translate_text(original_text, target_language):
     try:
