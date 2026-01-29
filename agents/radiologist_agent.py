@@ -5,7 +5,7 @@ from PIL import Image # Make sure PIL is imported if you use it elsewhere, thoug
 gemini_api_key = st.secrets["gemini"]["api_key"]
 
 genai.configure(api_key=gemini_api_key)
-model = genai.GenerativeModel("models/gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 def analyze_image(image_file_buffer, prompt, mime_type): # <--- CORRECTED: Now accepts 'mime_type'
     """
